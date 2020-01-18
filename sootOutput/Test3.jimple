@@ -1,0 +1,79 @@
+public class Test3 extends java.lang.Object
+{
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+
+        args := @parameter0: java.lang.String[];
+        staticinvoke <Test3: void func1(int)>(100);
+        staticinvoke <Test3: void func2(int)>(10);
+        staticinvoke <MyCounter: void report()>();
+        return;
+    }
+
+    public static void func1(int)
+    {
+        int x, temp$0, temp$1;
+
+        x := @parameter0: int;
+
+     label0:
+        nop;
+        staticinvoke <MyCounter: void increase(int)>(0);
+        staticinvoke <MyCounter: void line(java.lang.String,int)>("if x > 0 goto nop", 0);
+        if x > 0 goto label1;
+
+        goto label2;
+
+     label1:
+        nop;
+        staticinvoke <MyCounter: void increase(int)>(1);
+        staticinvoke <MyCounter: void line(java.lang.String,int)>("temp$0 = x", 1);
+        temp$0 = x;
+        temp$1 = temp$0 + -1;
+        x = temp$1;
+        goto label0;
+
+     label2:
+        nop;
+        return;
+    }
+
+    public static void func2(int)
+    {
+        int x, temp$0, temp$1;
+
+        x := @parameter0: int;
+
+     label0:
+        nop;
+        staticinvoke <MyCounter: void increase(int)>(2);
+        staticinvoke <MyCounter: void line(java.lang.String,int)>("if x < 100 goto nop", 2);
+        if x < 100 goto label1;
+
+        goto label2;
+
+     label1:
+        nop;
+        staticinvoke <MyCounter: void increase(int)>(3);
+        staticinvoke <MyCounter: void line(java.lang.String,int)>("temp$0 = x", 3);
+        temp$0 = x;
+        temp$1 = temp$0 + 1;
+        x = temp$1;
+        goto label0;
+
+     label2:
+        nop;
+        return;
+    }
+
+    public void <init>()
+    {
+        Test3 this;
+
+        this := @this: Test3;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

@@ -1,0 +1,38 @@
+public class Test4 extends java.lang.Object
+{
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        int x, temp$0, temp$1;
+
+        args := @parameter0: java.lang.String[];
+        x = 10;
+
+     label0:
+        nop;
+        staticinvoke <MyCounter: void increase(int)>(0);
+        staticinvoke <MyCounter: void line(java.lang.String,int)>("temp$0 = x", 0);
+        temp$0 = x;
+        temp$1 = temp$0 + 1;
+        x = temp$1;
+        nop;
+        if x < 40 goto label0;
+
+        goto label1;
+
+     label1:
+        nop;
+        staticinvoke <MyCounter: void report()>();
+        return;
+    }
+
+    public void <init>()
+    {
+        Test4 this;
+
+        this := @this: Test4;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}
